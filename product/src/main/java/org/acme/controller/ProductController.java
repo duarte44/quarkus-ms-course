@@ -68,4 +68,11 @@ public class ProductController {
         }
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ProductDTO findProductById(@PathParam("id") Long id){
+        return productService.getProductById(id);
+    }
+
 }

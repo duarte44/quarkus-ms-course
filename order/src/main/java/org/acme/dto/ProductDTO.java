@@ -5,22 +5,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.jackson.Jacksonized;
 
+import java.math.BigDecimal;
+
 @Data
-@Jacksonized
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerDTO {
-
-    private Long id;
+@Jacksonized
+public class ProductDTO {
 
     private String name;
 
-    private String phone;
+    private String description;
 
-    private String email;
+    private String category;
 
-    private String address;
+    private String model;
 
-    private Long age;
-
+    private BigDecimal price;
 }

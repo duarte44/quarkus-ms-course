@@ -52,6 +52,10 @@ public class ProductService {
         productRepositoy.deleteById(id);
     }
 
+    public ProductDTO getProductById(Long id){
+        return mapProductEntityToDTO(productRepositoy.findById(id));
+    }
+
 
     private ProductDTO mapProductEntityToDTO(ProductEntity productEntity){
 

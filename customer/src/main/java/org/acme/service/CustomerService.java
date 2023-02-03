@@ -6,6 +6,7 @@ import org.acme.repository.CustomerRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +46,9 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
+    public CustomerDTO findCustomerById(Long id){
+        return mapCustomerEntityDTO(customerRepository.findById(id));
+    }
 
 
     private CustomerDTO mapCustomerEntityDTO(CustomerEntity customer){

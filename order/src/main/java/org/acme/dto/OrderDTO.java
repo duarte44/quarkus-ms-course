@@ -7,21 +7,18 @@ import lombok.extern.jackson.Jacksonized;
 
 import java.math.BigDecimal;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Jacksonized
-public class ProductDTO {
+@Data
+public class OrderDTO {
 
-    private Long id;
+    private Long customerId;
 
-    private String name;
+    private String customerName;
 
-    private String description;
+    private Long productId;
 
-    private String category;
+    private BigDecimal orderValue;
 
-    private String model;
-
-    private BigDecimal price;
 }
